@@ -1,0 +1,7 @@
+{
+  "name": "appwrite-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
