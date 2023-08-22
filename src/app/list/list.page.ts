@@ -26,10 +26,10 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
     this.client
-      .setEndpoint("https://api.myshoefitter.com/v1")
-      .setProject("mysf")
+      .setEndpoint("https://cloud.appwrite.io/v1")
+      .setProject("liveparking-api")
       .setKey(
-        "aa5cafee6c49f5bdadb98b11b3192a910d6551c0bffb1675fb36e46109ad808be43bbcb103a7a912ed3b610b6a4d08e0725ca4b0135893b12c24b1937906b9ab784091e4be6faef0df6ecaa37d6eda4016f0ad7781ec669b93bbcc1479018352615e55a65541bf89e1b61e85caddb75d451272bdc0579ae9cf9f0ebf54833965"
+        "546c3f33723c60576f997caec150ea6e4319e9d1ba1bc0cf2b5eba549a186b51e502ded5b9b902da2d10406dd6dd232c2b8517f4ae66c36406abda200b69ebc424f50dcb579abee78134850cfd761b9796c95e4c22be461570bdd84936df37489412e6a674fb5e0cd4fd29bb46975b90360b90ae37fec40f81270e787d5afba0"
       )
       .setSelfSigned(true);
 
@@ -44,11 +44,11 @@ export class ListPage implements OnInit {
 
    });
 
-    this.getDocuments();
+    this.getDatabases();
   }
 
   navigate(id: string) {
-    this.navController.navigateForward(`/mysf/collections/main`);
+    this.navController.navigateForward(`/collections/list`);
     // this.navController.navigateForward(`/mysf/collections/${id}`);
   }
 
