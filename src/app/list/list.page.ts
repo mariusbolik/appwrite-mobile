@@ -78,5 +78,13 @@ export class ListPage implements OnInit {
     this.totalItems.set(total);
   }
 
+  async getUsers() {
+    const usr = new sdk.Users(this.client);
+    const { users, total } = await usr.list();
+    console.log('users', users)
+
+    this.items.set(users);
+    this.totalItems.set(total);
+  }
 
 }
